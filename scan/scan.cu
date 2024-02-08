@@ -78,7 +78,6 @@ void exclusive_scan(int* input, int N, int* result)
     // scan.
     int N_rounded = nextPow2(N);
     const int thread_per_block = 512;
-    printf("=====================\n");
     for (int two_d = 1; two_d <= N_rounded / 2; two_d *= 2){
         int two_dplus1 = 2 * two_d;
         int num_threads = N_rounded / two_dplus1;
